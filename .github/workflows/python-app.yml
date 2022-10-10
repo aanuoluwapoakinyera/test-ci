@@ -34,3 +34,7 @@ jobs:
     - name: Echo Job complete
       run: |
         echo "Job Complete"
+    - name: Install Nginx Server
+      run: |
+        sudo apt install nginx
+
