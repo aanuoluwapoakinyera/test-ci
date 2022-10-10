@@ -31,3 +31,6 @@ jobs:
     - name: Test with pytest
       run: |
         pytest example.py
+    - name: Echo Job complete
+      run: |
+        echo "Job Complete"
