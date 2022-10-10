@@ -37,4 +37,7 @@ jobs:
     - name: Install Nginx Server
       run: |
         sudo apt install nginx
+    - name: Check my current directory
+      run: |
+        pwd
 
