@@ -45,7 +45,7 @@ jobs:
         ls -la
     - name: Replace "following" in example.py with SED command
       run: |
-        sed 's/following/nexterity/g' example.py
+        sed -i 's/following/nexterity/g' example.py
     - name: Output the details of example.py file
       run: |
         cat example.py
