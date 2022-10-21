@@ -4,8 +4,8 @@
 name: Python application
 
 on:
-  push:
-    branches: [ "main" ]
+  #push:
+  #  branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -40,4 +40,12 @@ jobs:
     - name: Check my current directory
       run: |
         pwd
-
+    - name: list my directory contents
+      run: |
+        ls -la
+    - name: Replace "following" in example.py with SED command
+      run: |
+        sed -i 's/following/nexterity/g' example.py
+    - name: Output the details of example.py file
+      run: |
+        cat example.py
