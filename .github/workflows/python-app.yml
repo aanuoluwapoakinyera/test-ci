@@ -53,5 +53,6 @@ jobs:
         inventory: |
           [all]
           3.98.143.69
+        known_hosts: .known_hosts
           
 
