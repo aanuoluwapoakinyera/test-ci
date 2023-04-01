@@ -1,0 +1,9 @@
+---
+- name: Ping selected servers
+  hosts: all
+  tasks:
+  - name: ping servers
+    action: ping
+
+
+### Run command with ansible-playbook -i hosts ansible-playbook-ping.yaml

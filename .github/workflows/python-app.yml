@@ -34,10 +34,24 @@ jobs:
     - name: Echo Job complete
       run: |
         echo "Job Complete"
-    - name: Install Nginx Server
-      run: |
-        sudo apt install nginx
+    # - name: Install Nginx Server
+    #   run: |
+    #     sudo apt install nginx
     - name: Check my current directory
       run: |
         pwd
+    - name: Run playbook
+      uses: dawidd6/action-ansible-playbook@v2
+      with:
+        # Required, playbook filepath
+        playbook: deploy.yml
+        # Optional, directory where playbooks live
+        directory: ./
+        # Optional, SSH private key
+        key: ${{secrets.SSH_PRIVATE_KEY}}
+        # Optional, literal inventory file contents
+        inventory: |
+          [all]
+          3.98.143.69
+          
 
